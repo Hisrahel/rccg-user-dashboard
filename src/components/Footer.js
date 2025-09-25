@@ -85,10 +85,10 @@ export default function Footer() {
           <div className="footer-bottom">
             <p className="text-white">
               <small
-                >Read our <a href="privacy"><u>Privacy Notice</u></a> to
+                >Read our <a href="http://rccgc.netlify.app/privacy"><u>Privacy Notice</u></a> to
                 learn how we protect your information. </small>
             </p>
-            <a href="cookies"
+            <a href="http://rccgc.netlify.app/cookies"
               ><small><u>Cookie Notice</u></small></a
             >
           </div>
