@@ -67,10 +67,10 @@ export default function Events() {
                 ) : (
                   <div className="emptyevent">
                     <img src={add} alt="add event" />
-                    <h5>
+                    <h6>
                       Click on an event on the calendar to view the available
                       events
-                    </h5>
+                    </h6>
                   </div>
                 )}
               </div>

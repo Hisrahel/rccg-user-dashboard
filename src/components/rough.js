@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SideBar from "../components/SideBar";
-import TopBar from "../components/TopBar";
+import SideBar from "./SideBar";
+import TopBar from "./TopBar";
 function Notification() {
   return (
     <section className="dashboard">

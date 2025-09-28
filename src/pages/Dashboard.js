@@ -25,7 +25,7 @@ function Dashboard() {
                     portal
                   </p>
                 </div>
-                <img src={members} alt="" />
+                <img src={members} alt="" width="90px" />
               </div>
             </div>
             <div className="col-md-4">
@@ -37,7 +37,7 @@ function Dashboard() {
                     Track unread announcements to stay updated and informed.
                   </p>
                 </div>
-                <img src={announcement} alt="" />
+                <img src={announcement} alt="" width="90px" />
               </div>
             </div>
             <div className="col-md-4">
@@ -47,7 +47,7 @@ function Dashboard() {
                   <h2 className="event">00</h2>
                   <p>Quick insights into all upcoming events and attendance</p>
                 </div>
-                <img src={events} alt="" />
+                <img src={events} alt="" width="90px" />
               </div>
             </div>
           </div>

@@ -1,7 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Schibsted Grotesk", sans-serif !important;
+  font-weight: 600;
 }
 
 .fa-bars {
@@ -467,7 +482,6 @@ label {
   height: 32px;
   border-radius: 50%;
 }
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -476,31 +490,64 @@ label {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 8px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  min-width: 160px;
+  width: 250px;
   z-index: 100;
-  padding: 5px 20px;
+  padding: 10px 0; /* only vertical padding */
 }
 
+/* Each link */
 .dropdown-menu a {
-  padding: 10px 0;
-  color: #333;
-  text-decoration: none;
-  transition: background 0.2s;
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.dropdown-menu a span {
+  gap: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #000; /* default black */
   font-size: 14px;
+  transition: color 0.2s ease, stroke 0.2s ease;
 }
 
-/*.dropdown-menu a:hover {
-  background: #f5f5f5; 
-}*/
+/* Default SVG stroke black */
+.dropdown-menu a svg path {
+  stroke: #000;
+  transition: stroke 0.2s ease;
+}
+
+/* Hover effect: blue for text + icon */
+.dropdown-menu a span:hover {
+  color: #0045e8;
+}
+
+.dropdown-menu a:hover svg path {
+  stroke: #0045e8;
+}
+
+/* Divider line between items (optional) */
+.dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/* Logout special case */
+.dropdown-menu a .logout {
+  color: #970000; /* red text */
+}
+
+.dropdown-menu a:last-child svg path {
+  stroke: #970000; /* red icon */
+}
+
+/* Keep logout red on hover */
+.dropdown-menu a:hover .logout {
+  color: #970000;
+}
+
+.dropdown-menu a:last-child:hover svg path {
+  stroke: #970000;
+}
+
 .bell {
   margin-right: 10px;
   cursor: pointer;
@@ -513,9 +560,6 @@ label {
 }
 .logout {
   color: #970000;
-}
-.profile {
-  color: #0045e8;
 }
 
 /* Dashboard */
@@ -541,10 +585,17 @@ label {
   border-radius: 10px;
   gap: 20px;
   border: 1px solid #c0c0c0;
-  height: 30vh;
+  height: 100%;
 }
 .dashboard-card p {
-  font-size: 14px;
+  font-size: 13px;
+}
+.announce,
+.event,
+.members {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 5px 0;
 }
 .announce {
   color: #d08200;
@@ -611,7 +662,7 @@ label {
   gap: 10px;
 }
 .emptyevent img {
-  width: 60px;
+  width: 40px;
 }
 
 .fasting {
