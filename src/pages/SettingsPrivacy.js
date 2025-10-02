@@ -38,7 +38,10 @@ function SettingsPrivacy() {
               placeholder="Enter Email"
               className="form-control mb-3"
             />
-            <button className="btn btn-primary w-100" onClick={() => setStep(2)}>
+            <button
+              className="btn btn-primary w-100"
+              onClick={() => setStep(2)}
+            >
               Send Email
             </button>
           </div>
@@ -50,9 +53,12 @@ function SettingsPrivacy() {
             <h5>Email Sent</h5>
             <p>
               We have sent you an email at <b>{email}</b>. <br />
-              Check your inbox and follow the instructions to reset your password.
+              Check your inbox and follow the instructions to reset your
+              password.
             </p>
-            <a href="#" onClick={() => setStep(1)}>Wrong email? Change Email</a>
+            <a href="#" onClick={() => setStep(1)}>
+              Wrong email? Change Email
+            </a>
             <br />
             <a href="#">Resend Email</a>
           </div>
@@ -62,14 +68,20 @@ function SettingsPrivacy() {
         return (
           <div className="auth-modal-content">
             <h5>Verify Email Address</h5>
-            <p>Enter the email you used in creating the account, and we will send you a code to verify.</p>
+            <p>
+              Enter the email you used in creating the account, and we will send
+              you a code to verify.
+            </p>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-control mb-3"
             />
-            <button className="btn btn-primary w-100" onClick={() => setStep(4)}>
+            <button
+              className="btn btn-primary w-100"
+              onClick={() => setStep(4)}
+            >
               Verify Email
             </button>
           </div>
@@ -95,8 +107,12 @@ function SettingsPrivacy() {
               ))}
             </div>
             <div className="d-flex justify-content-between">
-              <button className="btn btn-secondary" onClick={closeModal}>Cancel</button>
-              <button className="btn btn-primary" onClick={() => setStep(5)}>Verify Email</button>
+              <button className="btn btn-secondary" onClick={closeModal}>
+                Cancel
+              </button>
+              <button className="btn btn-primary" onClick={() => setStep(5)}>
+                Verify Email
+              </button>
             </div>
           </div>
         );
@@ -143,28 +159,67 @@ function SettingsPrivacy() {
               <div className="settings-side-bar">
                 <a href="/settings">My Profile</a>
                 <a href="/notificationsettings">Notifications</a>
-                <a href="/settingsprivacy" className="active">Settings & Privacy</a>
+                <a href="/settingsprivacy" className="active">
+                  Settings & Privacy
+                </a>
                 <a href="/login">Delete Account</a>
+                <p class="pt-2">
+                  <small>
+                    Please read our{" "}
+                    <span
+                      onClick={() =>
+                        (window.location.href =
+                          "http://rccgc.netlify.app/privacy.html")
+                      }
+                      className="privacy-link"
+                    >
+                      <small>
+                        <u>Privacy Notice</u>
+                      </small>
+                    </span>{" "}
+                    to learn how we protect your personal data.
+                  </small>
+                </p>
               </div>
             </div>
             <div className="col-md-9">
               <div className="settings-content">
                 <h6>Security & Privacy Settings</h6>
-                <p className="text-secondary pt-1 pb-2">Manage your account security and devices</p>
+                <p className="text-secondary pt-1 pb-2">
+                  Manage your account security and devices
+                </p>
                 <hr className="my-4" />
                 <div className="verify-email">
                   <div>
                     <h6 className="pt-2">Verify Email Address</h6>
-                    <p className="text-secondary">Verify your email address when changed</p>
+                    <p className="text-secondary">
+                      Verify your email address when changed
+                    </p>
                   </div>
-                  <button onClick={() => { setShowModal(true); setStep(3); }}>Verify</button>
+                  <button
+                    onClick={() => {
+                      setShowModal(true);
+                      setStep(3);
+                    }}
+                  >
+                    Verify
+                  </button>
                 </div>
                 <div className="verify-email mt-5">
                   <div>
                     <h6 className="pt-2">Change Password</h6>
-                    <p className="text-secondary">Change your password to update and protect your account</p>
+                    <p className="text-secondary">
+                      Change your password to update and protect your account
+                    </p>
                   </div>
-                  <button onClick={() => { setShowModal(true); setStep(1); }}>Change</button>
+                  <button
+                    onClick={() => {
+                      setShowModal(true);
+                      setStep(1);
+                    }}
+                  >
+                    Change
+                  </button>
                 </div>
                 <hr className="my-4" />
                 <div className="notification-settings">
@@ -189,9 +244,7 @@ function SettingsPrivacy() {
       {/* Modal */}
       {showModal && (
         <div className="auth-modal-overlay">
-          <div className="auth-modal-box">
-            {renderModalContent()}
-          </div>
+          <div className="auth-modal-box">{renderModalContent()}</div>
         </div>
       )}
     </section>

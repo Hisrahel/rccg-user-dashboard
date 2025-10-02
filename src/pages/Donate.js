@@ -108,7 +108,23 @@ function Donate() {
                       className="form-control emaildown"
                       placeholder="Enter your email"
                     />
-
+                    <p>
+                      <small>
+                        Please read our{" "}
+                        <span
+                          onClick={() =>
+                            (window.location.href =
+                              "http://rccgc.netlify.app/privacy.html")
+                          }
+                          className="privacy-link"
+                        >
+                          <small>
+                            <u>Privacy Notice</u>
+                          </small>
+                        </span>{" "}
+                        to learn how we protect your personal data.
+                      </small>
+                    </p>
                     <a href="/donatehistory" className="donatebutton">
                       Donate Now
                     </a>

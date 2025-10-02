@@ -65,6 +65,23 @@ function Prayer() {
                   className="form-control"
                   placeholder="Enter your prayer request"
                 ></textarea>
+                <p class="pt-2">
+                  <small>
+                    Please read our{" "}
+                    <span
+                      onClick={() =>
+                        (window.location.href =
+                          "http://rccgc.netlify.app/privacy.html")
+                      }
+                      className="privacy-link"
+                    >
+                      <small>
+                        <u>Privacy Notice</u>
+                      </small>
+                    </span>{" "}
+                    to learn how we protect your personal data.
+                  </small>
+                </p>
                 <div className="sharebutton">
                   <a href="/prayerhistory" className="text-white">
                     <small>Share Your Prayer Request</small>

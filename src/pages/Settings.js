@@ -37,6 +37,22 @@ function Settings() {
                 <a href="/notificationsettings">Notifications</a>
                 <a href="/settingsprivacy">Settings & Privacy</a>
                 <a href="/login">Delete Account</a>
+                <p class="pt-2">
+                  <small>
+                    Please read our{" "}
+                    <span
+                      onClick={() =>
+                        (window.location.href =
+                          "http://rccgc.netlify.app/privacy.html")
+                      } className="privacy-link"
+                    >
+                      <small>
+                        <u>Privacy Notice</u>
+                      </small>
+                    </span>{" "}
+                    to learn how we protect your personal data.
+                  </small>
+                </p>
               </div>
             </div>
             <div className="col-md-9">
