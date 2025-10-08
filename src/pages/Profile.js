@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import man from "../assets/image/man.svg";
 
 function Profile() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="profile">
           <div className="profilebg">
             <p>My Profile</p>
@@ -56,7 +62,7 @@ function Profile() {
                 Edit
               </a>
             </div>
-            <hr className="hr"/>
+            <hr className="hr" />
             <div>
               <div className="name-edit">
                 <h6>Personal Information</h6>
@@ -124,7 +130,7 @@ function Profile() {
                 <div className="col-md-2"></div>
               </div>
             </div>
-            <hr className="hr"/>
+            <hr className="hr" />
             <div>
               <div className="name-edit">
                 <h6>My Social Media Links</h6>

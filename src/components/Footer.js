@@ -3,8 +3,11 @@ import ig from "../assets/image/ig.webp";
 import fb from "../assets/image/fb.webp";
 import yt from "../assets/image/yt.webp";
 import x from "../assets/image/x.webp";
+import "../css/style.css";
+import "../css/mobile.css";
 
 export default function Footer() {
+
   return (
     <footer className="footer">
       <div className="container">
@@ -105,7 +108,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-links">
-            <a href="http://rccgc.netlify.app/aboutus.html">About Us</a>
+            <a href="http://rccgc.netlify.app/aboutus.html">Aboutus</a>
             <a href="http://rccgc.netlify.app/resources.html">Resources</a>
             <a href="http://rccgc.netlify.app/ministry.html">Ministries</a>
             <a href="http://rccgc.netlify.app/events.html">Events</a>

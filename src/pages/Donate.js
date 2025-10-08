@@ -16,11 +16,17 @@ function Donate() {
     setAmount(value);
   };
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="prayer-title">
             <span>Online Donations & Giving</span>

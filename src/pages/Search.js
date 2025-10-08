@@ -15,9 +15,15 @@ function Search() {
 
   const [open, setOpen] = useState(false);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
         <div className="body-top">
           <div className="search-wrapper">
@@ -108,7 +114,11 @@ function Search() {
                   </svg>{" "}
                   <span className="profile">Profile</span>
                 </a>
-                <a href="http://rccgc.netlify.app/" target="_blank" rel="noreferrer">
+                <a
+                  href="http://rccgc.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"

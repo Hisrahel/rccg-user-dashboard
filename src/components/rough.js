@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 function Notification() {
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
         </div>
       </div>

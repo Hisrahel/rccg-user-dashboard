@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import search from "../assets/image/search.svg";
 import man from "../assets/image/man.svg";
+import logo from "../assets/image/rccglogo.webp";
+import faBars from "../assets/image/fabars.svg";
 
-export default function TopBar() {
+export default function TopBar({ onToggleSidebar }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -21,6 +23,7 @@ export default function TopBar() {
 
   return (
     <div className="body-top">
+      <img src={logo} alt="Dashboard Logo" className="dashboardlogo" />
       <div className="search-wrapper">
         <input
           type="text"
@@ -56,10 +59,16 @@ export default function TopBar() {
               />
             </svg>
           </a>
+          <img
+            src={faBars}
+            alt=""
+            className="dashboardbar"
+            onClick={onToggleSidebar}
+          />
         </div>
 
         <img src={man} alt="profile" className="avatar" />
-        <span>John Smith</span>
+        <span className="profilename">John Smith</span>
 
         <div className="svgdropdown" onClick={() => setOpen(!open)}>
           <svg

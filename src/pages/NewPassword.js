@@ -2,6 +2,7 @@ import "../css/style.css";
 import logo from "../assets/image/rccglogo.webp";
 
 export default function NewPassword() {
+
   return (
     <section className="login">
       <div className="containerfluid">

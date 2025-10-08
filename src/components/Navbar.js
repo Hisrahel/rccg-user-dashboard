@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import "../css/style.css";
+import "../css/mobile.css";
 import logo from "../assets/image/rccglogo.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
+
+
   return (
     <header>
       <div className="top-bar">
@@ -37,7 +42,8 @@ export default function Navbar() {
               <a
                 href="https://share.google/PBHWk8haAzFsRiboc"
                 className="text-dark"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +116,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i className="fas fa-bars"></i>
+            <FontAwesomeIcon icon={faBars} />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -124,32 +130,51 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://rccgc.netlify.app/aboutus.html">
+                <a
+                  className="nav-link"
+                  href="http://rccgc.netlify.app/aboutus.html"
+                >
                   ABOUT US
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://rccgc.netlify.app/resources.html">
+                <a
+                  className="nav-link"
+                  href="http://rccgc.netlify.app/resources.html"
+                >
                   RESOURCES
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://rccgc.netlify.app/ministry.html">
+                <a
+                  className="nav-link"
+                  href="http://rccgc.netlify.app/ministry.html"
+                >
                   MINISTRIES
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://rccgc.netlify.app/events.html">
+                <a
+                  className="nav-link"
+                  href="http://rccgc.netlify.app/events.html"
+                >
                   EVENTS
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="http://rccgc.netlify.app/contactus.html">
+                <a
+                  className="nav-link"
+                  href="http://rccgc.netlify.app/contactus.html"
+                >
                   CONTACT
                 </a>
               </li>
             </ul>
-            <button className="btn btn-login"><a href="/login" className="text-white">LOGIN</a></button>
+            <button className="btn btn-login">
+              <a href="/login" className="text-white">
+                LOGIN
+              </a>
+            </button>
           </div>
         </div>
       </nav>

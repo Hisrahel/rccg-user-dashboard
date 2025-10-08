@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import inter from "../assets/image/inter.svg";
 import note from "../assets/image/note.svg";
 
 function Prayer() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="prayer-title">
             <span>Prayer & Support Network</span>

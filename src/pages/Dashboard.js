@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import members from "../assets/image/members.svg";
@@ -7,14 +7,21 @@ import events from "../assets/image/event.svg";
 import logo from "../assets/image/rccglogo.webp";
 
 function Dashboard() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+  
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <h5>Welcome to RCCG, New Beginning Chapel Membership Portal</h5>
-          <div className="row">
+
+          <div className="row dashboardrow">
             <div className="col-md-4">
               <div className="dashboard-card">
                 <div>
@@ -28,6 +35,7 @@ function Dashboard() {
                 <img src={members} alt="" width="90px" />
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="dashboard-card">
                 <div>
@@ -40,12 +48,15 @@ function Dashboard() {
                 <img src={announcement} alt="" width="90px" />
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="dashboard-card">
                 <div>
                   <h6>Upcoming Events</h6>
                   <h2 className="event">00</h2>
-                  <p>Quick insights into all upcoming events and attendance</p>
+                  <p>
+                    Quick insights into all upcoming events and attendance
+                  </p>
                 </div>
                 <img src={events} alt="" width="90px" />
               </div>
@@ -65,6 +76,7 @@ function Dashboard() {
                   <a href="/resources">Learn More</a>
                 </div>
               </div>
+
               <div className="col-md-4">
                 <div className="blue-card">
                   <img src={logo} alt="" />
@@ -76,6 +88,7 @@ function Dashboard() {
                   <a href="/singlesfellowship">Learn More</a>
                 </div>
               </div>
+
               <div className="col-md-4">
                 <div className="blue-card">
                   <img src={logo} alt="" />

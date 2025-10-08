@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import man from "../assets/image/man.svg";
@@ -57,11 +57,17 @@ function Testimony() {
     }
   };
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="prayer-title">
             <span>Testimonies & Inspirations</span>
@@ -131,7 +137,7 @@ function Testimony() {
                   <span>Share Anonymously</span>
                 </div>
                 <label htmlFor="" className="pb-2">
-                 Your Testimony
+                  Your Testimony
                 </label>
                 <textarea
                   name=""
@@ -144,7 +150,9 @@ function Testimony() {
                 <p className="pt-3">Add to Featured Testimonies?</p>
                 <div className="sharediv">
                   <input type="checkbox" name="" id="" />
-                  <span>Yes, I'd love for my story to inspire more people.</span>
+                  <span>
+                    Yes, I'd love for my story to inspire more people.
+                  </span>
                 </div>
                 <div className="sharediv">
                   <input type="checkbox" name="" id="" />

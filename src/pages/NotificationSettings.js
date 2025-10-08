@@ -19,11 +19,17 @@ function NotificationSettings() {
     // Hide after 3s
     setTimeout(() => setNotification(null), 3000);
   };
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <h5>Account Settings</h5>
           <div className="settings-wrap row">
@@ -35,14 +41,15 @@ function NotificationSettings() {
                 </a>
                 <a href="/settingsprivacy">Settings & Privacy</a>
                 <a href="/login">Delete Account</a>
-                 <p class="pt-2">
+                <p class="pt-2">
                   <small>
                     Please read our{" "}
                     <span
                       onClick={() =>
                         (window.location.href =
                           "http://rccgc.netlify.app/privacy.html")
-                      } className="privacy-link"
+                      }
+                      className="privacy-link"
                     >
                       <small>
                         <u>Privacy Notice</u>

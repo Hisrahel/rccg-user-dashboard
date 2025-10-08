@@ -36,7 +36,7 @@ export default function ResetPassword() {
             </div>
           </div>
           <div className="col-md-6">
-            <div className="card p-5">
+            <div className="card p-5 resetcard">
               <h5>Reset Password</h5>
               <p>
                 We have sent you a code at <b>user@email.com</b>

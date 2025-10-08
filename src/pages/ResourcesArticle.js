@@ -5,11 +5,17 @@ import sky from "../assets/image/sky.webp";
 import bible from "../assets/image/bible.webp";
 
 function ResourcesArticle() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="row">
             <div className="col-md-8">
@@ -97,7 +103,7 @@ function ResourcesArticle() {
                   <h5 class="card-title">
                     What Does It Really Mean to Trust God?
                   </h5>
-                  <p class="card-text py-4"> 
+                  <p class="card-text py-4">
                     We often hear the phrase "Trust God," especially during hard
                     times. But when life gets uncertain, trust becomes more than
                     a...

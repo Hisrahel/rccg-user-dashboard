@@ -85,11 +85,17 @@ export default function DonationHistory() {
   const startIndex = (currentPage - 1) * rowsPerPage;
   const selectedRows = data.slice(startIndex, startIndex + rowsPerPage);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="prayer-title">
             <span>Online Donations & Giving</span>

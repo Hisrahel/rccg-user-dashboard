@@ -13,11 +13,17 @@ export default function Notifications() {
   const toggleMenu = (index) => {
     setOpenMenu(openMenu === index ? null : index);
   };
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="notification-wrap">
             <span>Notifications</span>

@@ -11,23 +11,29 @@ export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   const events = [
-    { id: 1, title: "Sunday Service", date: "2025-09-03", color: "green" },
-    { id: 2, title: "Midweek Service", date: "2025-09-06", color: "blue" },
-    { id: 3, title: "Prayer Meeting", date: "2025-09-10", color: "yellow" },
-    { id: 4, title: "Choir Rehearsal", date: "2025-09-14", color: "red" },
-    { id: 5, title: "Holy Communion", date: "2025-09-20", color: "purple" },
+    { id: 1, title: "Sunday Service", date: "2025-10-03", color: "green" },
+    { id: 2, title: "Midweek Service", date: "2025-10-06", color: "blue" },
+    { id: 3, title: "Prayer Meeting", date: "2025-10-10", color: "yellow" },
+    { id: 4, title: "Choir Rehearsal", date: "2025-10-14", color: "red" },
+    { id: 5, title: "Holy Communion", date: "2025-10-20", color: "purple" },
     {
       id: 6,
       title: "Worship Night: Sound of Heaven",
-      date: "2025-09-24",
+      date: "2025-10-24",
       color: "black",
     },
   ];
+   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <div className="row">
             {/* Calendar Left */}

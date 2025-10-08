@@ -69,14 +69,15 @@ li {
   gap: 30px;
 }
 
-.top-bar-row div {
+.top-bar-row div a {
   display: flex;
   align-items: center;
-  gap: 5px;
   cursor: pointer;
+  gap: 5px;
 }
-.top-bar-row span {
-  padding-left: 5px;
+
+.top-bar-row div a span {
+  font-size: 12px;
 }
 
 .navbar {
@@ -341,6 +342,9 @@ label {
 .signupbuttons > :last-child a {
   color: black;
 }
+.signupbuttons > :last-child a:hover {
+  color: white;
+}
 /* Forgotten Password */
 .arrowlink {
   display: flex;
@@ -482,6 +486,12 @@ label {
   height: 32px;
   border-radius: 50%;
 }
+
+.dashboardbar,
+.dashboardlogo {
+  display: none;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -495,28 +505,25 @@ label {
   flex-direction: column;
   width: 250px;
   z-index: 100;
-  padding: 10px 0; /* only vertical padding */
+  padding: 10px 0;
 }
 
-/* Each link */
 .dropdown-menu a {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 12px 20px;
   text-decoration: none;
-  color: #000; /* default black */
+  color: #000;
   font-size: 14px;
   transition: color 0.2s ease, stroke 0.2s ease;
 }
 
-/* Default SVG stroke black */
 .dropdown-menu a svg path {
   stroke: #000;
   transition: stroke 0.2s ease;
 }
 
-/* Hover effect: blue for text + icon */
 .dropdown-menu a span:hover {
   color: #0045e8;
 }
@@ -525,21 +532,18 @@ label {
   stroke: #0045e8;
 }
 
-/* Divider line between items (optional) */
 .dropdown-menu a:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
 
-/* Logout special case */
 .dropdown-menu a .logout {
-  color: #970000; /* red text */
+  color: #970000;
 }
 
 .dropdown-menu a:last-child svg path {
-  stroke: #970000; /* red icon */
+  stroke: #970000;
 }
 
-/* Keep logout red on hover */
 .dropdown-menu a:hover .logout {
   color: #970000;
 }

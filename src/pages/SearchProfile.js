@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import man from "../assets/image/man.svg";
 
-function searchprofile() {
+function SearchProfile() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content bg-white">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="profile">
           <div className="myprofilebg">
             <p>My Profile</p>
@@ -195,4 +201,4 @@ function searchprofile() {
   );
 }
 
-export default searchprofile;
+export default SearchProfile;

@@ -1,4 +1,5 @@
 import "../css/style.css";
+import "../css/mobile.css";
 import logo from "../assets/image/rccglogo.webp";
 
 export default function Login() {

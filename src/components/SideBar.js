@@ -1,11 +1,10 @@
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/image/rccglogo.webp";
 
-export default function SideBar() {
+export default function SideBar({ isOpen }) {
   const location = useLocation();
-
   return (
-    <div className="side-bar">
+    <div className={`side-bar ${isOpen ? "open" : "closed"}`}>
       <div className="topside-bar">
         <div className="logowrapper">
           <img src={logo} alt="image" />

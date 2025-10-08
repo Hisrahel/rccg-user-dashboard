@@ -69,11 +69,15 @@ export default function Signup() {
                     <option value="pastor">Pastor</option>
                   </select>
                   <p className="pt-4 pb-2">
-                    Please read our{" "}
-                    <a href="/">
-                      <u>Privacy Notice</u>
-                    </a>{" "}
-                    to learn how we protect your personal data.
+                    <small>
+                      Please read our{" "}
+                      <a href="/">
+                        <small>
+                          <u>Privacy Notice</u>
+                        </small>
+                      </a>{" "}
+                      to learn how we protect your personal data.
+                    </small>
                   </p>
                   <button className="mb-4" onClick={handleNext}>
                     Next
@@ -114,7 +118,7 @@ export default function Signup() {
                     </div>
                     <img src={recaptcha} alt="image" />
                   </div>
-                  <p>
+                  <p className="">
                     <small>
                       Please read our
                       <a href="/">

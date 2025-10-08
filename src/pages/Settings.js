@@ -21,11 +21,17 @@ function Settings() {
     setTimeout(() => setNotification(null), 3000);
   };
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <section className="dashboard">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
-        <TopBar />
+        <TopBar onToggleSidebar={toggleSidebar} />
         <div className="bottom-content">
           <h5>Account Settings</h5>
           <div className="settings-wrap row">
@@ -44,7 +50,8 @@ function Settings() {
                       onClick={() =>
                         (window.location.href =
                           "http://rccgc.netlify.app/privacy.html")
-                      } className="privacy-link"
+                      }
+                      className="privacy-link"
                     >
                       <small>
                         <u>Privacy Notice</u>
