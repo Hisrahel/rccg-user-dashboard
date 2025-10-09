@@ -31,7 +31,8 @@ button:hover {
   background: #0045e8 !important;
 }
 
-input:focus {
+input:focus,
+select:focus {
   box-shadow: none !important;
 }
 
@@ -938,7 +939,7 @@ li {
 .emaildown {
   margin-bottom: 30px;
 }
-.donate_button{
+.donate_button {
   margin: 50px 0 20px 0;
 }
 .donatebutton {

@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import SideBar from "../components/SideBar";
 import man from "../assets/image/man.svg";
 import SearchResult from "../components/SearchResult";
 import EmptyResult from "../components/EmptyResult";
+import faBars from "../assets/image/fabars.svg";
+import logo from "../assets/image/rccglogo.webp";
 
-function Search() {
+function Search({ onToggleSidebar }) {
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e) => {
@@ -26,6 +43,7 @@ function Search() {
       <SideBar isOpen={sidebarOpen} />
       <div className="body-content">
         <div className="body-top">
+          <img src={logo} alt="Dashboard Logo" className="dashboardlogo" />
           <div className="search-wrapper">
             {/* <input
               type="text"
@@ -36,7 +54,7 @@ function Search() {
           </div>
 
           {/* Profile Section */}
-          <div className="userprofile">
+          <div className="userprofile" ref={dropdownRef}>
             {/* Notification Bell */}
             <div className="bell">
               <a href="/notification">
@@ -63,11 +81,17 @@ function Search() {
                   />
                 </svg>
               </a>
+              <img
+                src={faBars}
+                alt=""
+                className="dashboardbar"
+                onClick={toggleSidebar}
+              />
             </div>
 
             {/* Profile Avatar */}
             <img src={man} alt="profile" className="avatar" />
-            <span>John Smith</span>
+            <span className="john-smith">John Smith</span>
 
             {/* Dropdown Arrow */}
             <div className="svgdropdown" onClick={() => setOpen(!open)}>
