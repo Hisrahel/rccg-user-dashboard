@@ -110,7 +110,7 @@ function Testimony() {
             />
           </div>
           <div className="burdens-card">
-            <div className="col-md-5">
+            <div className="col-md-5 px-2">
               <h5 className="burdens-card-head">Share Your Testimony</h5>
               <p>
                 Share your story and encourage someone today. Let the world know
@@ -118,16 +118,18 @@ function Testimony() {
               </p>
 
               <img src={note} alt="" />
-              <h6>Submission Notes</h6>
-              <ul>
-                <li>All testimonies are reviewed before publishing.</li>
-                <li>
-                  Featured testimonies may appear on the homepage or newsletter
-                  with your permission.
-                </li>
-                <li>You can choose to remain anonymous if preferred.</li>
-                <li>You may choose to remain anonymous.</li>
-              </ul>
+              <div className="feedback-note">
+                <h6>Submission Notes</h6>
+                <ul>
+                  <li>All testimonies are reviewed before publishing.</li>
+                  <li>
+                    Featured testimonies may appear on the homepage or
+                    newsletter with your permission.
+                  </li>
+                  <li>You can choose to remain anonymous if preferred.</li>
+                  <li>You may choose to remain anonymous.</li>
+                </ul>
+              </div>
             </div>
             <div className="col-md-5">
               <div className="submit-card">
@@ -162,6 +164,18 @@ function Testimony() {
                   <a href="/testimonyhistory" className="text-white">
                     <small>Share your testimony</small>
                   </a>
+                </div>
+              </div>
+              <div className="feedback_note px-1">
+                <h6>Submission Notes</h6>
+                <div>
+                  <li>All testimonies are reviewed before publishing.</li>
+                  <li>
+                    Featured testimonies may appear on the homepage or
+                    newsletter with your permission.
+                  </li>
+                  <li>You can choose to remain anonymous if preferred.</li>
+                  <li>You may choose to remain anonymous.</li>
                 </div>
               </div>
             </div>

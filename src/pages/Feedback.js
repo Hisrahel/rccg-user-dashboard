@@ -55,14 +55,22 @@ function Feedback() {
                 <p>
                   We would love to hear from you. Your feedback helps us serve
                   you better and continue building a spiritually enriching
-                  church community.
+                  church community. Whether it's about our services, events,
+                  website, or anything else, your voice matters to us.
                 </p>
-                <img src={feedback} alt="Feedback" width="90%" />
-                <h6 className="pt-5">Note:</h6>
-                <p>
-                  All feedback will be treated with confidentiality. If you'd
-                  like a response, kindly include your contact details.
-                </p>
+                <img
+                  src={feedback}
+                  alt="Feedback"
+                  width="90%"
+                  className="feedback-image"
+                />
+                <div className="feedback-note">
+                  <h6 className="pt-5">Note:</h6>
+                  <p>
+                    All feedback will be treated with confidentiality. If you'd
+                    like a response, kindly include your contact details.
+                  </p>
+                </div>
               </div>
               <div className="col-md-6">
                 <div className="donationcard">
@@ -122,6 +130,13 @@ function Feedback() {
                       </button>
                     </div>
                   </form>
+                </div>
+                <div className="feedback_note">
+                  <h6>Note:</h6>
+                  <p>
+                    All feedback will be treated with confidentiality. If you'd
+                    like a response, kindly include your contact details.
+                  </p>
                 </div>
               </div>
             </div>

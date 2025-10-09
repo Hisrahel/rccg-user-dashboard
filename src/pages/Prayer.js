@@ -24,7 +24,7 @@ function Prayer() {
             </a>
           </div>
           <div className="burdens-card">
-            <div className="col-md-5">
+            <div className="col-md-5 px-2">
               <h5 className="burdens-card-head">
                 Share Your Burdens. Receive Prayer.
               </h5>
@@ -45,13 +45,13 @@ function Prayer() {
               </p>
 
               <img src={note} alt="" />
-              <h6>Notes</h6>
-              <ul>
-                <li>
-                  All prayer requests are reviewed before being shared.
+              <div className="feedback-note">
+                <h6>Notes</h6>
+                <ul>
+                  <li>All prayer requests are reviewed before being shared.</li>
                   <li>You may choose to remain anonymous.</li>
-                </li>
-              </ul>
+                </ul>
+              </div>
             </div>
             <div className="col-md-5">
               <div className="submit-card">
@@ -92,6 +92,13 @@ function Prayer() {
                   <a href="/prayerhistory" className="text-white">
                     <small>Share Your Prayer Request</small>
                   </a>
+                </div>
+              </div>
+              <div className="feedback_note">
+                <h6>Notes</h6>
+                <div>
+                  <li>All prayer requests are reviewed before being shared.</li>
+                  <li>You may choose to remain anonymous.</li>
                 </div>
               </div>
             </div>

@@ -83,6 +83,7 @@ export default function Events() {
 
               {/* Fasting Card */}
               <div className="fasting">
+                <img src={newbeg} alt="" className="mt-2 mb-4"/>
                 <div className="upcoming">
                   <h5>
                     Church Fasting <br /> Periods
@@ -149,7 +150,7 @@ export default function Events() {
                 </svg>
               </a>
             </div>
-            <div className="row">
+            <div className="row singlesrow">
               <div className="col-md-4">
                 <div className="upcoming-card">
                   <img src={newbeg} alt="" width="100%" />

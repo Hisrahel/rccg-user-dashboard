@@ -65,7 +65,7 @@ function Volunteering() {
           </div>
 
           {/* Volunteer Cards */}
-          <div className="row mt-4">
+          <div className="row mt-4 singlesrow">
             {opportunities.map((op) => (
               <div className="col-md-4" key={op.id}>
                 <div className="volunteer-card">

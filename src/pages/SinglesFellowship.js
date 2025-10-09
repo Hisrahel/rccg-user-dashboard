@@ -89,7 +89,7 @@ function SinglesFellowship() {
               </a>
             </div>
 
-            <div className="row">
+            <div className="row singlesrow">
               {resources.map((item) => (
                 <div className="col-md-4" key={item.id}>
                   <div className="recentcard">
@@ -113,7 +113,7 @@ function SinglesFellowship() {
             <div className="upcoming">
               <h5 className="pt-2 pb-4">Upcoming Singles Focused Events</h5>
             </div>
-            <div className="row">
+            <div className="row singlesrow">
               <div className="col-md-4">
                 <div className="upcoming-card">
                   <img src={newbeg} alt="" width="100%" />

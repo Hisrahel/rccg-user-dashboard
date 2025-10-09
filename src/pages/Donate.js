@@ -38,7 +38,7 @@ function Donate() {
           </div>
           <div className="burdens-card">
             <div className="row burdenrow">
-              <div className="col-md-5">
+              <div className="col-md-5 px-3">
                 <h5 className="burdens-card-head">
                   Give with a Cheerful Heart
                 </h5>
@@ -50,13 +50,15 @@ function Donate() {
                 </p>
 
                 <img src={donatemockup} alt="" width="100%" />
-                <h6>Why Give?</h6>
-                <ul>
-                  <li>To honour God with our resources</li>
-                  <li>To support the work of ministry</li>
-                  <li>To be a blessing to others</li>
-                  <li>To invest in Kingdom impact</li>
-                </ul>
+                <div className="feedback-note">
+                  <h6>Why Give?</h6>
+                  <ul>
+                    <li>To honour God with our resources</li>
+                    <li>To support the work of ministry</li>
+                    <li>To be a blessing to others</li>
+                    <li>To invest in Kingdom impact</li>
+                  </ul>
+                </div>
               </div>
               <div className="col-md-6">
                 <div className="donationcard">
@@ -131,10 +133,21 @@ function Donate() {
                         to learn how we protect your personal data.
                       </small>
                     </p>
-                    <a href="/donatehistory" className="donatebutton">
-                      Donate Now
-                    </a>
+                    <div className="donate_button">
+                      <a href="/donatehistory" className="donatebutton">
+                        Donate Now
+                      </a>
+                    </div>
                   </form>
+                </div>
+                <div className="feedback_note mx-2">
+                  <h6>Why Give?</h6>
+                  <div>
+                    <li>To honour God with our resources</li>
+                    <li>To support the work of ministry</li>
+                    <li>To be a blessing to others</li>
+                    <li>To invest in Kingdom impact</li>
+                  </div>
                 </div>
               </div>
               <div className="mb-3 mt-4">

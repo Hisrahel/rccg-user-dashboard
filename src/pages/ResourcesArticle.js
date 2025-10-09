@@ -94,7 +94,7 @@ function ResourcesArticle() {
               </div>
             </div>
             <div className="col-md-4">
-              <p className="fs-5 pt-1">
+              <p className="fs-5 pt-1 explore-text">
                 <b>Explore Other Articles</b>
               </p>
               <div class="resource-card">

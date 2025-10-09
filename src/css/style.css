@@ -648,6 +648,39 @@ label {
   border-radius: 10px;
 }
 
+.upcoming a {
+  padding-top: 2px;
+  font-size: 14px;
+  color: #0045e8;
+  text-decoration: none;
+  font-weight: 500;
+}
+.upcoming-events {
+  border-radius: 10px;
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+}
+.upcomingtitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+.upcoming-card {
+  background: #0045e8;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+.upcoming-card h6 {
+  padding: 20px 0 10px 0;
+}
+.upcoming-card p {
+  font-size: 14px;
+}
+.datediv {
+  display: flex;
+  justify-content: space-between;
+}
 /* Events and Calendar */
 .calendar-event {
   height: 50%;
@@ -704,39 +737,6 @@ label {
 }
 
 .upcoming {
-  display: flex;
-  justify-content: space-between;
-}
-.upcoming a {
-  padding-top: 2px;
-  font-size: 14px;
-  color: #0045e8;
-  text-decoration: none;
-  font-weight: 500;
-}
-.upcoming-events {
-  border-radius: 10px;
-  background: white;
-  margin-top: 20px;
-  padding: 20px;
-}
-.upcomingtitle {
-  font-size: 20px;
-  font-weight: 500;
-}
-.upcoming-card {
-  background: #0045e8;
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-}
-.upcoming-card h6 {
-  padding: 20px 0 10px 0;
-}
-.upcoming-card p {
-  font-size: 14px;
-}
-.datediv {
   display: flex;
   justify-content: space-between;
 }
@@ -811,8 +811,6 @@ li {
 .submit-card {
   border: 1px solid #c3c3c3;
   border-radius: 15px;
-}
-.submit-card {
   padding: 20px 25px;
 }
 .sharediv {
@@ -883,6 +881,9 @@ li {
 }
 
 /* Donate */
+.feedback_note {
+  display: none;
+}
 .donationcard {
   border: 1px solid hsl(0, 0%, 76%);
   padding: 30px;
@@ -935,7 +936,10 @@ li {
   border-color: #0045e8;
 }
 .emaildown {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.donate_button{
+  margin: 50px 0 20px 0;
 }
 .donatebutton {
   background: #0045e8;
@@ -990,6 +994,7 @@ td {
 .table {
   border-collapse: collapse !important;
   width: 100% !important;
+  border: 1px solid white !important;
 }
 .tabledate {
   display: flex;
@@ -1007,9 +1012,6 @@ td {
 .tablepending {
   color: #8f8104 !important;
   background: #fffee4 !important;
-}
-.table {
-  border: 1px solid white !important;
 }
 .table-pagination {
   display: flex;

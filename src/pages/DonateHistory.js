@@ -159,11 +159,11 @@ export default function DonationHistory() {
                     stroke-width="1.5"
                   />
                 </svg>
-                <span>Filter by Date RAange</span>
+                <span>Filter by Date Range</span>
               </div>
             </div>
             <div>
-              <table className="table text-center table-bordered accordion-table">
+              <table className="table text-center table-bordered accordion-table table-responsive">
                 <thead>
                   <tr>
                     <th>DATE</th>

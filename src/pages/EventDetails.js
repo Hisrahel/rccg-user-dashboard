@@ -67,7 +67,7 @@ function EventDetails() {
               </div>
             </div>
             <div className="col-md-4">
-              <p className="fs-5 pt-1">
+              <p className="fs-5 pt-1 explore-text">
                 <b>Other Upcoming Events</b>
               </p>
               <div className="upcoming-card">

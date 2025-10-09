@@ -2,7 +2,6 @@ import React from "react";
 import alertsvg from "../assets/image/alertsvg.svg";
 
 function NotificationAlert({ message, type = "success", onClose }) {
-
   return (
     <div className={`notification-alert ${type}`} role="alert">
       <div className="svgalert">
