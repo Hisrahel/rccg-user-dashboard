@@ -1219,4 +1219,20 @@
     background-position: right 0.75rem center !important;
     background-size: 16px 12px !important;
   }
+
+  /* Notification */
+  .notification-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .notification-wrap span {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+
+  .notification-content {
+    height: 100%;
+  }
 }
